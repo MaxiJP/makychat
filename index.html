@@ -80,7 +80,7 @@
     end
 
     function connect_to_ws()
-        ws = WebSocket.new('ws://52.73.91.223:8080/')
+        ws = WebSocket.new('ws://52.201.214.204:8080/')
         ws:on('open', function()
             trace.log('WebSocket connected')
         end)
@@ -101,7 +101,7 @@
     end)
 
     loginBtn:on('mouseup', function(event)
-        local response = fetch('http://52.73.91.223:19800/user/login', {
+        local response = fetch('http://52.201.214.204:19800/user/login', {
             method = 'POST',
             headers = {
                 ['Content-Type'] = 'application/json'
